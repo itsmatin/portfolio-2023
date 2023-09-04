@@ -1,0 +1,35 @@
+.main > .headingImage {
+  width: 100%;
+  height: 430px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: url("../assets/matin-hd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.main > h1 {
+  margin-left: -12px;
+}
+
+.main > section {
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
+.main > section > h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.alignRight {
+  text-align: right;
+}
