@@ -1,0 +1,29 @@
+.container {
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
+.title {
+  text-align: left;
+}
+.workBar {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--white);
+  overflow: hidden;
+}
+
+.workBar > img {
+  z-index: 1;
+  width: 100%;
+  height: 40px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  position: absolute;
+  left: 0;
+  bottom: -75px;
+  transform-origin: bottom;
+}

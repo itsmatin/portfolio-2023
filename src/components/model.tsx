@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/garden-house-forbidden-city-beijing-chin
 Title: Garden House, Forbidden City, Beijing, China
 */
 
-import React, { useRef } from "react";
+import React from "react";
 import { useGLTF } from "@react-three/drei";
 import { useScroll, useTime, useTransform } from "framer-motion";
 import { useFrame } from "@react-three/fiber";

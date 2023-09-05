@@ -1,0 +1,47 @@
+.container h1 {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: stretch;
+}
+
+.contactBar {
+  position: relative;
+  flex-grow: 1;
+  height: 566px;
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.barBackground {
+  position: absolute;
+  transform-origin: top;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-green);
+  z-index: -1;
+  border-radius: inherit;
+}
+.contactBar > h2 {
+  color: inherit;
+}

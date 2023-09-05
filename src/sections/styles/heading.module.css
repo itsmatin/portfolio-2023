@@ -1,0 +1,15 @@
+.headingImage {
+  width: 100%;
+  height: 430px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: url("../../assets/matin-hd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+}
+
+.alignRight {
+  text-align: right;
+}

@@ -4,7 +4,6 @@
   --accent-green: #d6e5bb;
   --max-width: 1244px;
   --border-radius: 12px;
-  --font-body: var(--font-gudea);
 }
 
 * {
@@ -36,17 +35,29 @@ h1 {
   text-transform: uppercase;
   color: var(--accent-green);
 }
+
 h2 {
   font-family: var(--font-passion);
   color: var(--white);
   font-size: 100px;
   font-weight: bold;
 }
+
 h3 {
   font-family: var(--font-passion);
   font-size: 50px;
   color: var(--white);
 }
+
+p.body-2 {
+  color: var(--white);
+  font-family: var(--font-gudea);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
