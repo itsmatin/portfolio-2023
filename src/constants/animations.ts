@@ -1,1 +1,1 @@
-export const EASING = [0.645, 0.045, 0.355, 1];
+export const EASING = [0.455, 0.03, 0.515, 0.955];

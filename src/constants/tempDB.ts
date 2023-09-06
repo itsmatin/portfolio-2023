@@ -12,6 +12,7 @@ export const DB = {
       industry: "Music",
       role: "Co-founder/Engineering",
       url: "https://chimige.com",
+      image: "./test.png",
     },
   ],
 };

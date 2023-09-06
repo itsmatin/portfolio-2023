@@ -1,0 +1,16 @@
+.textContainer {
+  overflow: hidden;
+  display: inline-block;
+  text-align: inherit;
+}
+.textContainer > span {
+  display: inline-block;
+  margin-right: 10px;
+  text-align: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .textContainer > span {
+    margin-right: 5px;
+  }
+}

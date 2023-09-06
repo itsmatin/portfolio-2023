@@ -22,31 +22,68 @@ main {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-h1 {
+section {
+  width: 100%;
+}
+
+h1,
+.heading-1 {
   font-family: var(--font-passion);
-  font-size: 340px;
+  font-size: 23vw;
   line-height: 70%;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--accent-green);
 }
 
-h2 {
+@media screen and (max-width: 768px) {
+  h1,
+  .heading-1 {
+    font-size: 21vw;
+  }
+}
+
+h2,
+.heading-2 {
   font-family: var(--font-passion);
   color: var(--white);
   font-size: 100px;
+  line-height: 80%;
   font-weight: bold;
 }
 
-h3 {
+@media screen and (max-width: 768px) {
+  h2,
+  .heading-2 {
+    font-size: 32px;
+  }
+}
+
+h3,
+.heading-3 {
   font-family: var(--font-passion);
   font-size: 50px;
   color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  h3,
+  .heading-3 {
+    font-size: 24px;
+  }
 }
 
 p.body-2 {
@@ -58,8 +95,17 @@ p.body-2 {
   line-height: normal;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    background-color: var(--black);
   }
 }

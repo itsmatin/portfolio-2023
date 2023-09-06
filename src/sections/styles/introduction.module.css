@@ -2,6 +2,12 @@
   margin-top: 400px;
   margin-bottom: 400px;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+}
 .title {
   width: 100%;
   text-align: center;
