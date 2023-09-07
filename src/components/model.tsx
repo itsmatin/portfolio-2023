@@ -5,16 +5,16 @@ License: CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
 Source: https://sketchfab.com/3d-models/garden-house-forbidden-city-beijing-china-7vq3SGtUxHmOSmxU7qkl63JKVbc
 Title: Garden House, Forbidden City, Beijing, China
 */
-
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useScroll, useTime, useTransform } from "framer-motion";
 import { useFrame } from "@react-three/fiber";
 
 export function Model() {
+  const ref = useRef(null);
   const { nodes, materials } = useGLTF("./model.glb") as any;
   const { scrollYProgress } = useScroll();
-  const yAngle = useTransform(scrollYProgress, [0, 1], [-3.14159, 3.14159]);
+  const yAngle = useTransform(scrollYProgress, [0, 1], [-9, 9]);
 
   useFrame(({ camera }) => {
     camera.position.setFromSphericalCoords(yAngle.get(), yAngle.get(), 0);
@@ -22,7 +22,7 @@ export function Model() {
   });
 
   return (
-    <group dispose={null}>
+    <group ref={ref} position={[2, 0, -2]} dispose={null}>
       <points
         geometry={nodes.Object_2.geometry}
         material={materials["Scene_-_Root"]}

@@ -1,7 +1,7 @@
 import AnimatedText from "@/components/animatedText";
 import Cover from "@/components/cover";
 import styles from "@/sections/styles/heading.module.css";
-import { motion } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 const variants = {
   hidden: {
@@ -15,28 +15,33 @@ const variants = {
 };
 
 const Heading = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, 600]);
+
   return (
     <section>
       <div className={styles.headingImage}>
         <Cover type="vertical" />
       </div>
 
-      <AnimatedText
-        className="heading-3"
-        text={"He is an"}
-        transition={{ delay: 0.3 }}
-      />
+      <motion.div style={{ y }}>
+        <AnimatedText
+          className="heading-3"
+          text={"He is an"}
+          transition={{ delay: 0.3 }}
+        />
 
-      <motion.h1 className={styles.title} variants={variants}>
-        Engineer
-        <Cover type="horizontal" />
-      </motion.h1>
+        <motion.h1 className={styles.title} variants={variants}>
+          Engineer
+          <Cover type="horizontal" />
+        </motion.h1>
 
-      <AnimatedText
-        className={`heading-3 align-right`}
-        transition={{ delay: 0.3 }}
-        text="(even though he does not LOOK like one)"
-      />
+        <AnimatedText
+          className={`heading-3 align-right`}
+          transition={{ delay: 0.3 }}
+          text="(even though he does not LOOK like one)"
+        />
+      </motion.div>
     </section>
   );
 };

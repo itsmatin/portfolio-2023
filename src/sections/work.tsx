@@ -1,41 +1,51 @@
+import { EASING } from "@/constants/animations";
+import { DB } from "@/constants/tempDB";
 import styles from "@/sections/styles/work.module.css";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 
-const WorkBar = () => {
+const WorkBar = (props: Work) => {
   const [hover, setHover] = useState(false);
 
   return (
     <motion.div
-      className={styles.workBar}
+      className={`${styles.workBar}`}
+      onClick={() => window.open(props.url)}
       onHoverEnd={() => setHover(false)}
-      onHoverStart={() => {
-        setHover(true);
+      onHoverStart={() => setHover(true)}
+      transition={{ ease: EASING, duration: 0.2 }}
+      animate={{
+        background: hover ? "#fff" : "transparent",
+        color: hover ? "#000" : "#fff",
       }}
     >
-      <h3>Delysium</h3>
-      <p className="body-2">Blockchain - Engineering/Management</p>
+      <h3>{props.title}</h3>
+      <p className="body-2">
+        {props.industry} - {props.role}
+      </p>
 
       <motion.img
-        animate={{ y: hover ? "-75px" : "50px" }}
-        alt="delysium"
-        src="./test.png"
+        transition={{ ease: EASING, duration: 0.2 }}
+        animate={{ y: hover ? "-75px" : "40px" }}
+        alt={props.title + " - Matin Nikookar"}
+        src={props.image}
       />
     </motion.div>
   );
 };
 
 const Work = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 20]);
+
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>FEATURED WORK</h2>
-
-      <WorkBar />
-      <WorkBar />
-      <WorkBar />
-      <WorkBar />
-      <WorkBar />
-      <WorkBar />
+      <motion.h2 style={{ y }} className={styles.title}>
+        FEATURED WORK
+      </motion.h2>
+      {DB.work.map((item, i) => {
+        return <WorkBar {...item} key={i} />;
+      })}
     </section>
   );
 };

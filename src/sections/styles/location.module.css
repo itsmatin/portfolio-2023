@@ -1,8 +1,12 @@
 .container {
   position: relative;
-  margin-bottom: 400px;
+  /* overflow: hidden; */
 }
-
-.alignRight {
-  text-align: right;
+.title {
+  z-index: 10;
+}
+.secondTitle {
+  margin-top: -64px;
+  z-index: 13;
+  position: relative;
 }

@@ -5,9 +5,10 @@
 
 .titleContainer {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .barContainer {
@@ -29,6 +30,12 @@
   color: var(--white);
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 768px) {
+  .contactBar {
+    height: 340px;
+  }
 }
 
 .barBackground {
