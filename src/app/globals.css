@@ -99,6 +99,18 @@ p.body-2 {
   line-height: normal;
 }
 
+@media screen and (max-width: 768px) {
+  p.body-2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p.body-2 {
+    font-size: 12px;
+  }
+}
+
 .align-center {
   text-align: center;
 }

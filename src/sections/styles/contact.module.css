@@ -35,7 +35,8 @@
 
 @media screen and (max-width: 768px) {
   .contactBar {
-    height: 340px;
+    height: 150px;
+    width: initial;
   }
 }
 

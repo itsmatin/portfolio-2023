@@ -3,6 +3,12 @@
   margin-bottom: 400px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+}
 .title {
   text-align: left;
   margin-bottom: 8px;
