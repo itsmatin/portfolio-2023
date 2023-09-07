@@ -25,7 +25,11 @@ const AnimatedText = <T extends React.ElementType>({
   return (
     <div
       className={props?.className ? ` ${props.className}` : ""}
-      style={{ display: "inline-block", width: "100%" }}
+      style={{
+        display: "inline-block",
+        width: "100%",
+        textDecoration: "inherit",
+      }}
     >
       {text
         .split(" ")
@@ -36,6 +40,7 @@ const AnimatedText = <T extends React.ElementType>({
               <motion.span
                 initial="hidden"
                 animate="visible"
+                exit={{ opacity: 0 }}
                 variants={variants}
                 {...props}
               >

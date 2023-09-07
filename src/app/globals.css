@@ -4,6 +4,9 @@
   --accent-green: #d6e5bb;
   --max-width: 1244px;
   --border-radius: 12px;
+  --external-cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoUlEQVR4nO2VMQ7DIAxF3yWMeqScOwwZ2qkZstODECFlQFFwTKBT8iUPSOa/L1sCeFSpAfgBsVA+6/WFnkkDBMU8AqMBkKqo04YDCfD9F8AB83Zn7g2QLPkCvHoC5MCcXgC3G0s654sfWwBSSG6WBpBWcw3glLGwG5GvBUhF8ktLfhuSNwEm4GMwvwyo0Q0A4eS5joZKHuqH0wIJm8cjzFoBlbCPZdUo6dUAAAAASUVORK5CYII=")
+      24 24,
+    pointer;
 }
 
 * {

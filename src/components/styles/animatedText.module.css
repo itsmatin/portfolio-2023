@@ -2,11 +2,13 @@
   overflow: hidden;
   display: inline-block;
   text-align: inherit;
+  text-decoration: inherit;
 }
 .textContainer > span {
   display: inline-block;
   margin-right: 10px;
   text-align: inherit;
+  text-decoration: inherit;
 }
 
 @media screen and (max-width: 768px) {

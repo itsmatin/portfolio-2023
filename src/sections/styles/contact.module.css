@@ -1,5 +1,6 @@
 .container h1 {
   text-align: center;
+  margin-top: 32px;
   margin-bottom: 90px;
 }
 
@@ -8,7 +9,6 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 32px;
 }
 
 .barContainer {
@@ -30,6 +30,7 @@
   color: var(--white);
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
+  cursor: var(--external-cursor);
 }
 
 @media screen and (max-width: 768px) {

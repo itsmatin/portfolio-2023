@@ -12,3 +12,8 @@
   width: 100%;
   text-align: center;
 }
+
+.lineThrough {
+  text-decoration: underline;
+  text-decoration-line: line-through;
+}

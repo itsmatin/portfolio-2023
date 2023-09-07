@@ -2,11 +2,27 @@ import InView from "@/components/InView";
 import AnimatedText from "@/components/animatedText";
 import { EASING } from "@/constants/animations";
 import styles from "@/sections/styles/contact.module.css";
-import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import {
+  motion,
+  useAnimation,
+  useInView,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
-const ContactBar = ({ title, url }: { title: string; url: string }) => {
+const ContactBar = ({
+  title,
+  url,
+  delay = 0,
+}: {
+  title: string;
+  url: string;
+  delay?: number;
+}) => {
   const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
 
   const hoverHandler = () => {
     controls.start({
@@ -21,14 +37,18 @@ const ContactBar = ({ title, url }: { title: string; url: string }) => {
       transition: { ease: EASING, duration: 0.3 },
     });
   };
+
   return (
     <motion.a
       href={url}
       target="_blank"
+      ref={ref}
       className={styles.contactBar}
       onHoverStart={hoverHandler}
       onHoverEnd={unhoverHandler}
       whileHover={{ color: "#000" }}
+      animate={{ opacity: inView ? 1 : 0 }}
+      transition={{ ease: EASING, duration: 0.4, delay }}
     >
       <motion.div
         className={styles.barBackground}
@@ -66,8 +86,9 @@ const Contact = () => {
       </motion.h1>
       <div className={styles.barContainer}>
         <ContactBar title="github" url="https://github.com/itsmatin" />
-        <ContactBar title="CV" url="https://github.com/itsmatin" />
+        <ContactBar delay={0.3} title="CV" url="https://github.com/itsmatin" />
         <ContactBar
+          delay={0.5}
           title="LinkedIn"
           url="https://www.linkedin.com/in/matinnikookar/"
         />
