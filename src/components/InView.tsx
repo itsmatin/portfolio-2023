@@ -8,7 +8,7 @@ const InView = ({
   children: any;
 }) => {
   const isVisible = useInView(containerRef, {
-    margin: "-40%",
+    margin: "-30%",
     once: true,
   });
 

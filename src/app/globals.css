@@ -17,7 +17,9 @@
 
 html,
 body {
+  position: relative;
   max-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 main {
@@ -123,5 +125,57 @@ p.body-2 {
   html {
     color-scheme: dark;
     background-color: var(--black);
+  }
+}
+
+/* Loading  */
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--accent-green);
+  color: var(--black);
+}
+
+.loading-bar {
+  transform-origin: left;
+  background-color: var(--black);
+}
+
+.loading-text-container {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 18px solid var(--black);
+}
+
+.loading div {
+  flex-grow: 1;
+  height: 50%;
+}
+
+.loading h1 {
+  font-size: 32vw;
+  text-align: center;
+  color: var(--black);
+}
+
+.loading span {
+  font-family: var(--font-passion);
+  font-size: 3vw;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .loading span {
+    font-size: 32px;
   }
 }

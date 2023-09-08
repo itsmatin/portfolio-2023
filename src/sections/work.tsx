@@ -15,6 +15,7 @@ const WorkBar = (props: Work) => {
       onHoverStart={() => setHover(true)}
       transition={{ ease: EASING, duration: 0.2 }}
       animate={{
+        height: hover ? "100px" : "70px",
         background: hover ? "#fff" : "transparent",
         color: hover ? "#000" : "#fff",
       }}
@@ -24,12 +25,12 @@ const WorkBar = (props: Work) => {
         {props.industry} - {props.role}
       </p>
 
-      <motion.img
+      {/* <motion.img
         transition={{ ease: EASING, duration: 0.2 }}
         animate={{ y: hover ? "-75px" : "40px" }}
         alt={props.title + " - Matin Nikookar"}
         src={props.image}
-      />
+      /> */}
     </motion.div>
   );
 };

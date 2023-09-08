@@ -18,7 +18,11 @@ const Location = () => {
       </motion.h1>
 
       <Canvas
-        style={{ height: "100vh", width: "calc(100vw - 80px)" }}
+        style={{
+          height: "100vh",
+          width: "calc(100vw + 80px)",
+          marginLeft: -80,
+        }}
         camera={{
           fov: 45,
           near: 0.1,

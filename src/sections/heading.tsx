@@ -16,7 +16,7 @@ const variants = {
 
 const Heading = () => {
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
   return (
     <section>
