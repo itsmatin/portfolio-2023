@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Gudea, Passion_One } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const passionOne = Passion_One({
   weight: ["400", "700"],
@@ -15,9 +16,18 @@ const gudea = Gudea({
 });
 
 export const metadata: Metadata = {
-  title: "Matin - Portfolio 2023",
+  title: "Matin Nikookar - Portfolio 2023",
+  icons: "./icon.png",
+  applicationName: "Matin Nikookar - Portfolio 2023",
   description:
     "Matin Nikookar is a Software Engineer with focus on team management and frontend engineering.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Matin Nikookar - Portfolio 2023",
+    description:
+      "Matin Nikookar is a Software Engineer with focus on team management and frontend engineering.",
+    images: "./matin-hd.pngs",
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${passionOne.variable} ${gudea.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
