@@ -6,8 +6,8 @@ import Location from "@/sections/location";
 import Heading from "@/sections/heading";
 import Introduction from "@/sections/introduction";
 import { useEffect, useState } from "react";
-import Loading from "./loading";
-import { AnimatePresence, motion } from "framer-motion";
+import Loading from "../components/loading";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [mount, setMount] = useState(false);

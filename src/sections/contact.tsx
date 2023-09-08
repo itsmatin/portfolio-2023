@@ -86,7 +86,7 @@ const Contact = () => {
       </motion.h1>
       <div className={styles.barContainer}>
         <ContactBar title="github" url="https://github.com/itsmatin" />
-        <ContactBar delay={0.3} title="CV" url="https://github.com/itsmatin" />
+        <ContactBar delay={0.3} title="CV" url="/matin-2023.pdf" />
         <ContactBar
           delay={0.5}
           title="LinkedIn"

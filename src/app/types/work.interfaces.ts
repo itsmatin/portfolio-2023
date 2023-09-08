@@ -3,5 +3,5 @@ interface Work {
   industry: string;
   role: string;
   url: string;
-  image: string;
+  image?: string;
 }
