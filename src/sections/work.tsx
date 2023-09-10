@@ -21,7 +21,7 @@ const WorkBar = (props: Work) => {
       }}
     >
       <h3>{props.title}</h3>
-      <p className="body-2">
+      <p className="body-2" style={{ textAlign: "right" }}>
         {props.industry} - {props.role}
       </p>
 
@@ -42,7 +42,7 @@ const Work = () => {
   return (
     <section className={styles.container}>
       <motion.h2 style={{ y }} className={styles.title}>
-        FEATURED WORK
+        SELECTED WORK
       </motion.h2>
       {DB.work.map((item, i) => {
         return <WorkBar {...item} key={i} />;

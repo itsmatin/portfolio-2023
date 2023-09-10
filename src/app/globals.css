@@ -21,6 +21,7 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--black);
 }
 main {
   position: relative;
@@ -121,13 +122,6 @@ p.body-2 {
   text-align: right;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-    background-color: var(--black);
-  }
-}
-
 /* Loading  */
 .loading {
   position: fixed;
@@ -159,7 +153,15 @@ p.body-2 {
 
 .loading div {
   flex-grow: 1;
-  height: 50%;
+  height: 60%;
+}
+.loading div:first-of-type {
+  height: 40%;
+}
+@media screen and (max-width: 768px) {
+  .loading div:first-of-type {
+    height: 30%;
+  }
 }
 
 .loading h1 {

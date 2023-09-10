@@ -27,7 +27,7 @@ const Heading = () => {
       <motion.div style={{ y }}>
         <AnimatedText
           className="heading-3"
-          text={"He is an"}
+          text={"I am an"}
           transition={{ delay: 0.3 }}
         />
 
@@ -37,9 +37,9 @@ const Heading = () => {
         </motion.h1>
 
         <AnimatedText
-          className={`heading-3 align-right`}
+          className="heading-3 align-right"
           transition={{ delay: 0.3 }}
-          text="(even though he does not LOOK like one)"
+          text="even though I do not LOOK like one"
         />
       </motion.div>
     </section>

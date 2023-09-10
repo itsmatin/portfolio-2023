@@ -26,7 +26,7 @@ const ContactBar = ({
 
   const hoverHandler = () => {
     controls.start({
-      height: 566,
+      height: "100%",
       transition: { ease: EASING, duration: 0.3 },
     });
   };
@@ -64,7 +64,7 @@ const Contact = () => {
   const titleContainer = useRef(null);
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [500, -100]);
-  const x2 = useTransform(scrollYProgress, [0, 1], [-100, 200]);
+  const x2 = useTransform(scrollYProgress, [0, 1], [-300, 0]);
 
   return (
     <section className={styles.container}>
@@ -76,9 +76,8 @@ const Contact = () => {
         <InView containerRef={titleContainer}>
           <AnimatedText
             className="heading-3"
-            text="Looking for a new position as of"
+            text="Got a project to discuss? Let us connect"
           />
-          <AnimatedText className="heading-3" text="September 1st, 2023" />
         </InView>
       </motion.div>
       <motion.h1 transition={{ type: "keyframes" }} style={{ x }}>
