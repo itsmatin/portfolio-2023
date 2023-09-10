@@ -30,6 +30,21 @@ export default function Home() {
       <Location />
       <Work />
       <Contact />
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          flexFlow: "row nowrap",
+          justifyContent: "space-between",
+          marginTop: "16px",
+          color: "#fff",
+        }}
+      >
+        <small>Matin Nikookar - Portfolio 2023</small>
+        <small>
+          3D Model: Garden House, Forbidden City, Beijing, China - by Paul Marx
+        </small>
+      </div>
     </motion.main>
   ) : (
     <Loading />
