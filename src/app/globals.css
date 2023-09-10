@@ -44,6 +44,9 @@ a {
 section {
   width: 100%;
 }
+small {
+  font-size: 10px;
+}
 
 h1,
 .heading-1 {

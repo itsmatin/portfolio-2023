@@ -34,7 +34,8 @@ export default function Home() {
         style={{
           width: "100%",
           display: "flex",
-          flexFlow: "row nowrap",
+          flexFlow: "row wrap",
+
           justifyContent: "space-between",
           marginTop: "16px",
           color: "#fff",
